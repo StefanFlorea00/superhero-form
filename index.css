@@ -1,16 +1,16 @@
 :root {
-  --primary-color: #ebc355;
-  --primary-color-hover: #ffe292;
-  --secondary-color: #666666;
-  --secondary-color-hover: #979797;
-  --invalid-color: #f78989;
-  --invalid-color-hover: #ffaeae;
+  --primary-color: #e7bf4f;
+  --primary-color-hover: #fce29b;
+  --secundary-color: #214252;
+  --secundary-color-hover: #5194b6;
+  --invalid-color: #d66f6f;
+  --invalid-color-hover: #e4a3a3;
   --valid-color: #90d867;
   --valid-color-hover: #b3e794;
   --font-primary: #ffffff;
-  --font-secondary: #2d2e29;
-  --bg-color-primary: #2e2e2e;
-  --bg-color-secondary: radial-gradient(circle, rgba(230, 230, 230, 1) 0%, rgba(172, 172, 172, 1) 100%);
+  --font-secundary: #2d2e29;
+  --bg-color-primary: #3a718d;
+  --bg-color-secondary: radial-gradient(circle, #ffffff 0%, #b9b9b9 100%);
   --font-size: 20px;
 }
 
@@ -19,7 +19,6 @@ body {
 }
 
 * {
-  color: #c0c0c0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -57,6 +56,14 @@ form {
 
 .code {
   background-color: var(--bg-color-primary);
+}
+
+.bg-waves {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+  transform: scaleY(3);
 }
 
 /* SECTION */
@@ -140,7 +147,7 @@ label {
 }
 
 input[type="text"] {
-  background-color: var(--secondary-color);
+  background-color: var(--secundary-color);
   font-size: var(--font-size);
   border: 0;
   height: 20px;
@@ -155,7 +162,7 @@ input[type="text"] {
 input[type="text"]:active,
 input[type="text"]:focus,
 input[type="text"]:hover {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 
 #age {
@@ -165,7 +172,7 @@ input[type="text"]:hover {
 /*TEXTAREA */
 
 textarea {
-  background-color: var(--secondary-color);
+  background-color: var(--secundary-color);
   font-size: var(--font-size);
   border: 0;
   height: 120px;
@@ -190,7 +197,7 @@ input:hover:invalid {
 textarea:active,
 textarea:focus,
 textarea:hover {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 
 /* CHECKBOX */
@@ -226,19 +233,19 @@ input[type="checkbox"]:after {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: var(--secondary-color);
+  background-color: var(--secundary-color);
   top: 0;
   left: 0;
   transition: 0.2s ease-out;
 }
 
 input[type="checkbox"]:hover:after {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 
 input[type="checkbox"]:checked:after {
   background-color: var(--primary-color);
-  color: var(--font-secondary);
+  color: var(--font-secundary);
 }
 
 input[type="checkbox"]:checked:hover:after {
@@ -246,7 +253,7 @@ input[type="checkbox"]:checked:hover:after {
 }
 
 input[type="checkbox"]:checked + label {
-  color: var(--font-secondary);
+  color: var(--font-secundary);
 }
 
 /*RADIO */
@@ -278,19 +285,19 @@ input[type="radio"]:after {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: var(--secondary-color);
+  background-color: var(--secundary-color);
   top: 0;
   left: 0;
   transition: 0.2s ease-out;
 }
 
 input[type="radio"]:hover:after {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 
 input[type="radio"]:checked:after {
   background-color: var(--primary-color);
-  color: var(--font-secondary);
+  color: var(--font-secundary);
 }
 
 input[type="radio"]:checked:hover:after {
@@ -298,7 +305,7 @@ input[type="radio"]:checked:hover:after {
 }
 
 input[type="radio"]:checked + label {
-  color: var(--font-secondary);
+  color: var(--font-secundary);
 }
 
 input[type="radio"]:invalid {
@@ -309,7 +316,7 @@ input[type="radio"]:invalid {
 
 select {
   display: block;
-  background-color: var(--secondary-color);
+  background-color: var(--secundary-color);
   font-size: var(--font-size);
   border: 0;
   padding: 10px;
@@ -324,7 +331,7 @@ select {
 }
 
 select:hover {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 
 select option:hover,
@@ -333,7 +340,7 @@ select option:focus {
   outline: none;
   cursor: pointer;
   background-color: var(--primary-color-hover) !important;
-  color: var(--font-secondary);
+  color: var(--font-secundary);
 }
 
 /*BTN*/
@@ -345,10 +352,10 @@ select option:focus {
 /*PRIMARY BTN*/
 
 .main-btn {
-  background-color: #ebc355;
+  background-color: var(--primary-color);
   display: inline-block;
   cursor: pointer;
-  color: #2d2e29;
+  color: var(--font-secundary);
   font-size: var(--font-size);
   width: 10vw;
   height: 55px;
@@ -373,7 +380,7 @@ select option:focus {
 /*SECUNDARY BTN*/
 
 .sec-btn {
-  background-color: var(--secondary-color);
+  background-color: var(--secundary-color);
   display: inline-block;
   cursor: pointer;
   color: var(--font-primary);
@@ -386,7 +393,7 @@ select option:focus {
   transition: linear 0.2s;
 }
 .sec-btn:hover {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 .sec-btn:active {
   position: relative;
@@ -394,7 +401,7 @@ select option:focus {
 }
 
 .sec-btn:focus {
-  background-color: var(--secondary-color-hover);
+  background-color: var(--secundary-color-hover);
 }
 
 /* DETAILS */
@@ -402,7 +409,7 @@ select option:focus {
 .details-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  color: var(--font-primary);
   width: 20vw;
   margin: 50px 0;
 }

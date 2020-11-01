@@ -100,6 +100,7 @@ function updateDetails(){
   detailsRight[2].textContent = form.elements.age.value;
   detailsRight[3].textContent = form.elements.gender.value;
   detailsRight[4].textContent = form.elements.home_planet.value;
+  // not getting strengths despite getting weaknesses???
   // detailsRight[5].textContent = form.elements.strengths.value;
   detailsRight[6].textContent = form.elements.weaknesses.value;
   detailsRight[7].textContent = form.elements.team.value;
