@@ -176,7 +176,7 @@ textarea {
   background-color: var(--secundary-color);
   font-size: var(--font-size);
   border: 0;
-  height: 120px;
+  height: 10vh;
   padding: 10px;
   appearance: none;
   outline: none;
@@ -184,7 +184,9 @@ textarea {
   width: 25vw;
   transition: 0.2s background-color linear;
   max-width: 25vw;
-  max-height: 25vw;
+  max-height: 25vh;
+  min-height: 5vh;
+  min-width: 25vw;
 }
 
 input:invalid {
