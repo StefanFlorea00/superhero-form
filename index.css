@@ -61,10 +61,11 @@ form {
 
 .bg-waves {
   position: absolute;
-  bottom: 0;
+  bottom: 25%;
   z-index: -1;
   opacity: 0.3;
-  transform: scaleY(3);
+  transform: scale(2) scaleY(1.8);
+  transform-origin: center;
 }
 
 /* SECTION */
