@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form>
+
+    <section id="section-0">
+        <h1>Let's create a superhero</h1>
+
+        <div class="textbox-div">
+        <label for="hero_name">Superhero name<span class="required">*</span></label>
+        <input type="text" id="hero_name" name="hero_name" required>
+        </div>
+
+        <div class="textbox-div">
+        <label for="real_name">Real name<span class="required">*</span></label>
+        <input type="text" id="real_name" name="real_name" required>
+        </div>
+
+        <div class="textbox-div">
+            <label for="age">Age<span class="required">*</span></label>
+            <input type="text" id="age" name="age" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+            </div>
+
+            <div class="textbox-div radio">
+                <label>Radio</label>
+                <div class="flex center">
+              <div class="radio-input-div">
+              <input type="radio" name="gender" id="gender" value="male" required>
+              <label for="radio" class="select-label">Male</label>
+              </div>
+              <div class="radio-input-div">
+                <input type="radio" name="gender" id="gender" value="female">
+                <label for="gender" class="select-label">Female</label>
+                </div>
+                <div class="radio-input-div">
+                    <input type="radio" name="gender" id="gender" value="other">
+                    <label for="gender" class="select-label">Other</label>
+                    </div>
+              </div>
+            </div>
+
+        <div class="btn-div flex center">
+            <button type="button" class="main-btn">Start</button>
+        </div>
+    </section>
+
+
+    <section id="section-1" class="hidden">
+        <h1>Just a few more details</h1>
+
+        <div class="textbox-div">
+            <label for="home_planet">Home Planet</label>
+            <input type="text" id="home_planet" name="home_planet">
+            </div>
+
+        <div class="textbox-div">
+        <label for="stengths">Strengths</label>
+        <textarea id="stengths" name="stengths" rows="4" cols="50"></textarea>
+        </div>
+        <div class="textbox-div">
+        <label for="weaknesses">Weaknesses</label>
+        <textarea id="weaknesses" name="weaknesses" rows="4" cols="50"></textarea>
+        </div>
+
+        
+        <div class="textbox-div ">
+            <label class="">Team</label>
+            <div class="flex center">
+                <div class="checkbox-input-div">
+                    <input type="checkbox" name="team" id="check " value="Avengers">
+                    <label for="check" class="select-label">Avengers</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                    <input type="checkbox" name="team" id="check" value="Justice League">
+                    <label for="check" class="select-label">Justice League</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                    <input type="checkbox" name="team" id="check" value="X-men">
+                    <label for="check" class="select-label">X-men</label>
+                    </div>
+                </div>
+        </div>
+
+        <div class="btn-div flex center">
+            <button type="button" class="sec-btn">Back</button>
+            <button type="button" class="main-btn">Next</button>
+        </div>
+    </section>
+    
+
+    <section id="section-2" class="hidden">
+    <h1>Is this your superhero?</h1>
+     
+    <div class="details-wrapper">
+        <div class="left">
+        <p>Name:</p>
+        <p>Real name:</p>
+        <p>Age:</p>
+        <p>Gender:</p>
+        <p>Home planet:</p>
+        <p>Strengths:</p>
+        <p>Weaknesses:</p>
+        <p>Team:</p>
+    </div>
+    <div class="right">
+        <p>name</p>
+        <p>realname</p>
+        <p>age</p>
+        <p>gender</p>
+        <p>homeplanet</p>
+        <p>strengths</p>
+        <p>weaknesses</p>
+        <p>team</p>
+    </div>
+    </div>
+    
+    <div class="btn-div flex center">
+        <button type="button"  class="sec-btn">No</button>
+        <input type="submit" class="main-btn" value="Submit">
+    </div>
+
+    </section>
+    </form>
+</body>
+<script src="index.js"></script>
+</html>
