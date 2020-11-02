@@ -1,140 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create a superhero</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
     <form>
-
-    <section id="section-0">
+      <section id="section-0">
         <h1>Let's create a superhero</h1>
 
         <div class="textbox-div">
-        <label for="hero_name">Superhero name<span class="required">*</span></label>
-        <input type="text" id="hero_name" name="hero_name" required>
+          <label for="hero_name">Superhero name<span class="required">*</span></label>
+          <input type="text" id="hero_name" name="hero_name" required minlength="3" />
         </div>
 
         <div class="textbox-div">
-        <label for="real_name">Real name<span class="required">*</span></label>
-        <input type="text" id="real_name" name="real_name" required>
+          <label for="real_name">Real name<span class="required">*</span></label>
+          <input type="text" id="real_name" name="real_name" required minlength="3" />
         </div>
 
         <div class="textbox-div">
-            <label for="age">Age<span class="required">*</span></label>
-            <input type="text" id="age" name="age" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-            </div>
+          <label for="age">Age<span class="required">*</span></label>
+          <input
+            type="text"
+            id="age"
+            name="age"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            required
+            minlength="1"
+          />
+        </div>
 
-            <div class="textbox-div radio">
-                <label>Gender<span class="required">*</span></label>
-                <div class="flex center">
-              <div class="radio-input-div">
-              <input type="radio" name="gender" id="gender" value="male" required>
+        <div class="textbox-div radio">
+          <label>Gender<span class="required">*</span></label>
+          <div class="flex center">
+            <div class="radio-input-div">
+              <input type="radio" name="gender" id="gender" value="male" required />
               <label for="radio" class="select-label">Male</label>
-              </div>
-              <div class="radio-input-div">
-                <input type="radio" name="gender" id="gender" value="female">
-                <label for="gender" class="select-label">Female</label>
-                </div>
-                <div class="radio-input-div">
-                    <input type="radio" name="gender" id="gender" value="other">
-                    <label for="gender" class="select-label">Other</label>
-                    </div>
-              </div>
             </div>
+            <div class="radio-input-div">
+              <input type="radio" name="gender" id="gender" value="female" />
+              <label for="gender" class="select-label">Female</label>
+            </div>
+            <div class="radio-input-div">
+              <input type="radio" name="gender" id="gender" value="other" />
+              <label for="gender" class="select-label">Other</label>
+            </div>
+          </div>
+        </div>
 
         <div class="btn-div flex center">
-            <button type="button" class="main-btn">Start</button>
+          <button type="button" class="main-btn">Start</button>
         </div>
-    </section>
+      </section>
 
-
-    <section id="section-1" class="hidden">
+      <section id="section-1" class="hidden">
         <h1>Just a few more details</h1>
 
         <div class="textbox-div">
-            <label for="home_planet">Home Planet</label>
-            <input type="text" id="home_planet" name="home_planet">
+          <label for="home_planet">Home Planet</label>
+          <input type="text" id="home_planet" name="home_planet" />
+        </div>
+
+        <div class="textbox-div">
+          <label for="strengths">Strengths</label>
+          <textarea id="strengths" name="strengths" rows="4" cols="50"></textarea>
+        </div>
+        <div class="textbox-div">
+          <label for="weaknesses">Weaknesses</label>
+          <textarea id="weaknesses" name="weaknesses" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="textbox-div">
+          <label class="">Team</label>
+          <div class="flex center">
+            <div class="checkbox-input-div">
+              <input type="checkbox" name="team" id="check " value="Avengers" />
+              <label for="check" class="select-label">Avengers</label>
             </div>
 
-        <div class="textbox-div">
-        <label for="stengths">Strengths</label>
-        <textarea id="stengths" name="stengths" rows="4" cols="50"></textarea>
-        </div>
-        <div class="textbox-div">
-        <label for="weaknesses">Weaknesses</label>
-        <textarea id="weaknesses" name="weaknesses" rows="4" cols="50"></textarea>
-        </div>
+            <div class="checkbox-input-div">
+              <input type="checkbox" name="team" id="check" value="Justice League" />
+              <label for="check" class="select-label">Justice League</label>
+            </div>
 
-        
-        <div class="textbox-div ">
-            <label class="">Team</label>
-            <div class="flex center">
-                <div class="checkbox-input-div">
-                    <input type="checkbox" name="team" id="check " value="Avengers">
-                    <label for="check" class="select-label">Avengers</label>
-                    </div>
-
-                    <div class="checkbox-input-div">
-                    <input type="checkbox" name="team" id="check" value="Justice League">
-                    <label for="check" class="select-label">Justice League</label>
-                    </div>
-
-                    <div class="checkbox-input-div">
-                    <input type="checkbox" name="team" id="check" value="X-men">
-                    <label for="check" class="select-label">X-men</label>
-                    </div>
-                </div>
+            <div class="checkbox-input-div">
+              <input type="checkbox" name="team" id="check" value="X-men" />
+              <label for="check" class="select-label">X-men</label>
+            </div>
+          </div>
         </div>
 
         <div class="btn-div flex center">
-            <button type="button" class="sec-btn">Back</button>
-            <button type="button" class="main-btn">Next</button>
+          <button type="button" class="sec-btn">Back</button>
+          <button type="button" class="main-btn">Next</button>
         </div>
-    </section>
-    
+      </section>
 
-    <section id="section-2" class="hidden">
-    <h1>Is this your superhero?</h1>
-     
-    <div class="details-wrapper">
-        <div class="left">
-        <p>Name:</p>
-        <p>Real name:</p>
-        <p>Age:</p>
-        <p>Gender:</p>
-        <p>Home planet:</p>
-        <p>Strengths:</p>
-        <p>Weaknesses:</p>
-        <p>Team:</p>
-    </div>
-    <div class="right">
-        <p>name</p>
-        <p>realname</p>
-        <p>age</p>
-        <p>gender</p>
-        <p>homeplanet</p>
-        <p></p>
-        <p>weaknesses</p>
-        <p>team</p>
-    </div>
-    </div>
-    
-    <div class="btn-div flex center">
-        <button type="button"  class="sec-btn">No</button>
-        <input type="submit" class="main-btn" value="Yes">
-    </div>
+      <section id="section-2" class="hidden">
+        <h1>Is this your superhero?</h1>
 
-    </section>
+        <div class="details-wrapper">
+          <div class="left">
+            <p>Name:</p>
+            <p>Real name:</p>
+            <p>Age:</p>
+            <p>Gender:</p>
+            <p>Home planet:</p>
+            <p>Strengths:</p>
+            <p>Weaknesses:</p>
+            <p>Team:</p>
+          </div>
+          <div class="right">
+            <p data-field="hero_name"></p>
+            <p data-field="real_name"></p>
+            <p data-field="age"></p>
+            <p data-field="gender"></p>
+            <p data-field="home_planet"></p>
+            <p data-field="strengths"></p>
+            <p data-field="weaknesses"></p>
+            <p data-field="team"></p>
+          </div>
+        </div>
+
+        <div class="btn-div flex center">
+          <button type="button" class="sec-btn">No</button>
+          <input type="submit" class="main-btn" value="Yes" />
+        </div>
+      </section>
+
+      <section id="section-3" class="hidden">
+        <h1>All done!</h1>
+        <div class="btn-div flex center">
+          <button type="button" class="main-btn">Go again</button>
+        </div>
+      </section>
     </form>
 
     <svg class="bg-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#3a718d" fill-opacity="1" d="M0,96L21.8,122.7C43.6,149,87,203,131,224C174.5,245,218,235,262,218.7C305.5,203,349,181,393,181.3C436.4,181,480,203,524,208C567.3,213,611,203,655,181.3C698.2,160,742,128,785,133.3C829.1,139,873,181,916,192C960,203,1004,181,1047,170.7C1090.9,160,1135,160,1178,133.3C1221.8,107,1265,53,1309,42.7C1352.7,32,1396,64,1418,80L1440,96L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path>
-      </svg>
-
-</body>
-<script src="index.js"></script>
+      <path
+        fill="#3a718d"
+        fill-opacity="1"
+        d="M0,96L21.8,122.7C43.6,149,87,203,131,224C174.5,245,218,235,262,218.7C305.5,203,349,181,393,181.3C436.4,181,480,203,524,208C567.3,213,611,203,655,181.3C698.2,160,742,128,785,133.3C829.1,139,873,181,916,192C960,203,1004,181,1047,170.7C1090.9,160,1135,160,1178,133.3C1221.8,107,1265,53,1309,42.7C1352.7,32,1396,64,1418,80L1440,96L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
+      ></path>
+    </svg>
+  </body>
+  <script src="index.js"></script>
 </html>
